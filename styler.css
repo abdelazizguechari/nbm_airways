@@ -1,0 +1,695 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+
+    --orange : #88a2b0;
+    --blue : #182d38;
+    --background:#f3f3f3;
+    --transition : 0.3s linear;
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-transform: capitalize;
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    text-decoration: none;
+   
+    
+}
+
+
+
+
+html, body {
+  height: 100%; /* Ensure body and HTML take full height */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+ul  {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+
+
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+
+
+.header {
+ 
+  position: relative; 
+  background-image: url(image/img3.png);
+  background-size: cover;
+  z-index: 9999999;
+
+  height: auto; 
+  min-height: 100vh; 
+  overflow-y: auto; 
+  transition: background-image 1s ease-in-out;
+}
+
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 1200px) {
+    .header .container {
+        padding: 1rem 3%;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+  }
+
+
+  
+
+.header .container .logo p {
+
+  margin-top: 1px;
+  font-size: 4vh;
+  color: #fff;
+ 
+  
+  }
+
+
+
+  
+  
+.header .container .nav a{
+
+      text-decoration: none;
+      font-size: 18px;
+      padding-left: 25px;
+      color: rgb(255, 255, 255);
+      transition: 0.3s linear;
+      position: relative;
+      }  
+  
+      .header .container .nav a span {
+        font-family: 'Kalam', cursive;
+          color: var(--orange);
+        font-weight: 400; }
+  
+        .header .container .nav li .g-menu:hover {
+          font-size: 22px;
+          color: var(--orange);
+        }
+  
+  
+        .nav li {
+          position: relative;
+          display: inline-block;
+      }
+  
+      .nav .v-menu {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+  
+      .nav div {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 17px;
+          background-color: #f9f9f9;
+          border-radius: 12px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+  
+      .nav li:hover div {
+          display: block;
+          opacity: 1;
+      }
+  
+      .nav div .v-menu:hover {
+          background-color: #ddd;
+      }
+  
+
+      .button {
+        margin-top: 50px ;
+        font-size: 16px;
+      }
+
+      .button .b1 {
+        padding: 10px;
+        border-radius: 5px;
+        width: 250px;
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+
+      .button button {
+        padding: 10px;
+        border-radius: 5px;
+        width: 250px;
+        color: #fff;
+        background-color: #2D0030;
+      }
+
+
+      .border {
+        margin-top: -20px;
+        width: 800px;
+        height: 300px;
+        background-color:transparent;
+        border: 3px solid #fff;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+
+
+      .row {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: #fff;
+      }
+
+      .row input {
+
+        background-color: transparent;
+        height: 35px;
+        margin-left: 5px;
+        color: #fff;
+      }
+
+      .row input:focus {
+        background-color: transparent; 
+      
+    }
+
+
+    .row input::placeholder {
+       color: #fff;
+      
+    }
+
+    .row select {
+
+        background-color: transparent;
+        height: 35px;
+        margin-left: 5px;
+        color: #fff;
+
+    }
+
+    .row select option {
+
+        background-color: transparent;
+
+
+    }
+
+
+    .section {
+      background-color: #1E0822 ;
+      background-size: cover;
+      min-height: 100vh; 
+   
+  }
+
+
+.section .container .element {
+  padding-top: 130px;
+    display: flex;                 /* Keep this to align text and image */
+    justify-content: center;       /* Center the content inside .element */
+    align-items: center;           /* Center the content vertically */
+}
+
+.section .container .element img {
+    width: 366px;                  /* Image width */
+    height: 200px;                 /* Image height */
+    border-radius: 10px;  
+    transition: 0.2s linear;         /* Rounded corners */
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.icon-left {
+  left: 30px;
+}
+
+.icon-right {
+  right: 30px;
+}
+
+
+
+
+
+.section .container .element img:hover {
+  transform: scale(101%);
+}
+
+
+.section .container .element .text {
+    font-size: 12px;               /* Font size */
+    color: #fff;                   /* Text color */
+    margin-left: 5px;              /* Space between image and text */
+    position: relative;            /* Relative positioning */
+}
+
+
+.section .container .element .text button {  
+
+padding: 10px;
+border-radius: 5px;
+width: 150px;
+color: #fff;
+background-color: #7D1F72;
+transition: 0.2s linear;
+
+}
+
+.section .container .element .text button:hover {
+  transform: scale(102%);
+  background-color: #65195d;
+}
+
+
+.section1 {
+  background-color: #EFEFEF ;
+
+  min-height: 100vh; 
+
+}
+
+
+.section1 .container .element {
+  padding-top: 100px;
+    display: flex;                 /* Keep this to align text and image */
+    justify-content: center;       /* Center the content inside .element */
+    align-items: center;           /* Center the content vertically */
+}
+
+.section1 .container .element img {
+  width: 300px;                  /* Image width */
+  height: 280px;                 /* Image height */
+  border-radius: 10px;  
+  transition: 0.2s linear; 
+  margin-right: 50px;        /* Rounded corners */
+}
+
+
+
+.section1 .container .element img:hover {
+  transform: scale(101%);
+}
+
+
+.section1 .container .element .text {
+    font-size: 12px;               /* Font size */
+    color: #2e1035;                   /* Text color */
+    margin-left: 5px;              /* Space between image and text */
+    position: relative; 
+             /* Relative positioning */
+}
+
+
+.section1 .container .element .text h5 {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+
+.section1 .container .element .text button {  
+
+padding: 10px;
+border-radius: 5px;
+width: 150px;
+color: #fff;
+background-color: #7D1F72;
+transition: 0.2s linear;
+
+}
+
+.section1 .container .element .text button:hover {
+  transform: scale(102%);
+  background-color: #65195d;
+}
+
+
+
+.section1 .container  .cadr {
+  width: 360px;
+  height: 300px;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-left: 20px;
+
+  border-radius: 4%;
+  margin-bottom: 10px;
+}
+
+
+
+.section1 .container  .cadr img {
+  height: 60%;
+  width: 100%;
+
+}
+
+
+.section1 .container  .space-btw {
+  display: flex;
+  justify-content: center;
+}
+
+
+.section2 {
+
+
+  background-color: #1E0822 ;
+  background-size: cover;
+  min-height: 100vh; 
+
+}
+
+
+
+
+.card__container {
+  padding-block: 5rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  position: relative;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: 16px;
+  color: darkblue;
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: purple;
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color:#fff;
+  font-weight: 600;
+}
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: #fff;
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+
+
+
+.section3 {
+
+
+  background-color: #EFEFEF ;
+
+  min-height: 100vh; 
+
+}
+
+.section3 .container .row .col img {
+  width: 100%;
+}
+
+
+.section4 {
+
+  
+  background-color: #1E0822 ;
+
+  min-height: 20vh; 
+
+
+}
+
+
+.styled-date-input {
+  font-family: 'Kalam', cursive;  /* Custom font */
+  padding: 10px 15px;             /* Padding for the input */
+  font-size: 16px;                /* Adjust font size */
+  color: #333;                    /* Text color */
+  background-color: #f9f9f9;      /* Background color */
+  border: 2px solid #ccc;         /* Light gray border */
+  border-radius: 8px;             /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  outline: none;                  /* Remove default outline */
+  transition: all 0.3s ease;      /* Smooth transition */
+  width: 100%;                    /* Full width */
+  max-width: 300px;               /* Max width for better control */
+}
+
+/* Change border and background on focus */
+.styled-date-input:focus {
+  border-color: #2d0030;          /* Darker border on focus */
+  background-color: #fff;         /* White background on focus */
+  color: #000;                    /* Darker text color */
+  box-shadow: 0 0 8px rgba(45, 0, 48, 0.3); /* Focus shadow */
+}
+
+/* Placeholder styling */
+.styled-date-input::placeholder {
+  color: #999;                    /* Light gray placeholder */
+  font-style: italic;             /* Italic style for placeholder */
+}
+
+
+
+
+/* General Flatpickr styling */
+.flatpickr-calendar {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flatpickr-day {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 50%;  /* Circular day buttons */
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.flatpickr-day:hover {
+  background-color: #f3c8e3;
+}
+
+/* Selected day styling */
+.flatpickr-day.selected {
+  background-color: #9b4dca;
+  color: white;
+}
+
+/* Today’s date */
+.flatpickr-day.today {
+  border: 2px solid #ff6f61;
+  color: #ff6f61;
+}
+
+/* Month navigation buttons */
+.flatpickr-prev-month, .flatpickr-next-month {
+  color: #9b4dca;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+/* Calendar header */
+.flatpickr-month {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Calendar container */
+.flatpickr-months {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+}
+
+
+
+
+.row .custom-button {
+  width: 150px;
+  background-color: rgb(40, 5, 74);
+  border-radius: 3px;
+  margin-right: 15px;
+ transition: 0.2s linear;
+ text-align: center;
+}
+
+.row .custom-button:hover {
+transform: scale(101%);
+background-color: rgb(29, 3, 54);
+}
