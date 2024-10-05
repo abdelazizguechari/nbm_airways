@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"> <!-- Change 'en' to 'fr' for French -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NBR Airways website to book flights">
-    <meta name="keywords" content="flights, tickets, travel, NBR Airways">
+    <meta name="description" content="Site web de NBR Airways pour réserver des vols">
+    <meta name="keywords" content="vols, billets, voyage, NBR Airways">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
    <!--=============== REMIXICONS ===============-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
@@ -14,406 +14,272 @@
    <!--=============== SWIPER CSS ===============-->
    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-<!-- Include Flatpickr JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <!-- Include Flatpickr JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styler.css">
-    <title>NBR Airways – Book Flights</title>
+    <link rel="stylesheet" href="assets/css/styler.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <title>NBR Airways – Réservez des vols</title> <!-- Updated the title -->
 </head>
 <body>
-   
-    
-        <!-- Header Section -->
-        <div class="header">
-            <div class="container">
-                <div class="row d-flex align-items-center d-flex justify-content-between">
-               
-             
-                        <div class="logo">
-                            <p>NBR Airways</p>
-                        </div>
-                
-    
-                    <!-- Navigation Menu -->
-                 
-                        <div class="nav">
-                            <ul class="d-flex justify-content-end">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Flights</a></li>
-                                <li><a href="#">Destination</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                    </div>
-                </div>
-         
-       
-    
-             <!-- Button Section -->
-       
-                <div class="button d-flex justify-content-center align-items-center">
-                   <!-- Left and Right Chevron Icons -->
-                    <i class="fa-solid fa-chevron-left icon icon-left"></i>
-                    <i class="fa-solid fa-chevron-right icon icon-right"></i>
-    
-                  <!-- Buttons -->
-                     <button >Buy Ticket</button>
-                    <button class="b1">Add Card</button>
-                </div>
-       
-    
-                <div  class=" d-flex justify-content-center align-items-center mt-4 mb-4">
-                
-                    <div class="border p-3">
-                        <form action="your_action_page.php" method="post">
-                         <div class="row mb-3">
-                                <div class="col-md-6">
-                                <select class="form-control" name="" id="">
-                         
-                                <option value="">round trip</option>
-                                <option value="">One-way</option>
-                                <option value="">Multi-city</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="date" class="styled-date-input "   placeholder="travle date">
-                        </div>
-                    </div>
-    
-                    <div class="row mb-3">
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder="Arriving at">
-                        </div>
-                        <div class="col-md-4">
-                     
-                            <input type="text" class="form-control" placeholder="Departing from">
-                        </div>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" placeholder=" 1 adulte">
-                        </div>
-                    </div>
-    
-                    <div class="row">
-                        <div class="col-md-12">
-                            <select class="form-control" name="" id=""> 
-                         
-                                <option value="">Economey</option>
-                                <option value="">premuim</option>
-                                <option value="">Busiense</option>
-                            </select>
-                        </div>
-                    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="image/Assdet 3.png" alt="">
+            </div>
 
-                    <div class="row justify-content-end">
+            <nav>
+                <ul>
+                    <li><a class="active" href="">Accueil</a></li> <!-- Translated "Home" -->
+                    <li><a href="">Enregistrement</a></li> <!-- Translated "Check-in" -->
+                    <li><a href="">Programme</a></li> <!-- Translated "Flight Schedule" -->
+                    <li><a href="">Destination</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
 
-                        <input class="custom-button" type="submit " value="Search flights" />
-                   </div> 
-                 </form>
+              
+            </nav>
+
+
+            <div class="menu">
+                <button>Fr <i style="font-size: 11px;" class="fa-solid fa-chevron-down"></i></button> <!-- Language button (French) -->
+                <button>Se connecter <i class="fa-solid fa-user"></i></button> <!-- Translated "Login" -->
+            </div> 
+
+           
+        </div>
+    </header>
+
+    <div class="landing">
+        <div class="overlay"></div>
+
+        <div class="container">
+            <div class="grid-container">
+                <div class="button">
+                    <button>Acheter un billet</button> <!-- Translated "Buy Ticket" -->
+                    <button class="b1">Ajouter une carte</button> <!-- Translated "Add Card" -->
                 </div>
             </div>
 
-        </div>
-        
-    </div>
-</div>
+            <div class="flex-container">
+                <div class="border p-3">
+                    <form action="your_action_page.php" method="post">
+                        <div class="row mb-6">
+                            <div class="col-md-6">
+                                <select class="form-control" name="" id="">
+                                    <option value="">Aller-retour</option> <!-- Translated "Round trip" -->
+                                    <option value="">Aller simple</option> <!-- Translated "One-way" -->
+                                    <option value="">Multi-destinations</option> <!-- Translated "Multi-city" -->
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="date" class="form-control" placeholder="Date de voyage"> <!-- Translated "Travel date" -->
+                            </div>
+                        </div>
 
-        <div class="section">
-            <div class="container">
-              <div class="element">
-              
-                <div class="image">
-                <img  src="image/card1.png" alt="">
+                        <div class="row mb-6">
+                            <div class="col-md-4">
+
+                                <div class="input-icon">
+                                    <input type="text" class="form-control" placeholder="Départ de"> 
+                                   <i class="fa-solid fa-plane-departure"></i> 
+                               </div><!-- Translated "Departing from" -->
+                            <!-- Translated "Arriving at" -->
+                            </div>
+                            <div class="col-md-4">
+
+                                <div class="input-icon">
+                                    <input type="text" class="form-control" placeholder="Arrivée à">
+                                    <i class="fa-solid fa-plane-arrival"></i>
+                                 </div>
+
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="1 adulte"> <!-- Translated "1 Adult" -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <select class="form-control" name="" id="">
+                                    <option value="">Économique</option> <!-- Translated "Economy" -->
+                                    <option value="">Premium</option>
+                                    <option value="">Affaires</option> <!-- Translated "Business" -->
+                                </select>
+                            </div>
+
+                           
+                        </div>
+
+                        <div style="position: absolute; left: 61%;" class="row justify-content-end">
+                            <input  class="custom-button p-2" type="submit" value="Rechercher" /> <!-- Translated "Search flights" -->
+                        </div>
+                    </form>
                 </div>
-               
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="element">
+                <div class="image">
+                    <img src="image/Artboardfdfd 1@4x.png" alt="">
+                </div>
 
                 <div class="text">
-                    <h5>explore  the world with our <br>
-                         new card</h5> 
+                    <h5>Explorez le monde avec notre <br>nouvelle carte</h5> <!-- Translated "explore the world with our new card" -->
 
-                         <button>Get the card</button>
+                    <button>Obtenez la carte</button> <!-- Translated "Get the card" -->
                 </div>
-
-
-              </div>
             </div>
         </div>
-    
+    </div>
 
-        <div class="section1">
-            <div class="container">
+    <div class="section1">
+        <div class="container">
+            <div class="element">
               
-            
-                <div class="element">
-      
-                    <div class="image">
-                      <img  src="image/girl1.png" alt="">
-                
-                    </div>
-      
-                    <div class="text">
-                          <h5>Discover your journey <br>
-                            with unbeatable offers <br>
-                             and the best prices  <br>    
-                    </div>
-                </div>
+            </div>
 
-         
-                    <div class="space-btw">
-
-                      <div class="image">
-                        <div class="cadr">
-                          <img  src="image/photo1.png" alt="">
-
-                          <div class="p-2">
-                          <h5>Explore Our Flight Options</h5>
-                          <p>searches for the best offers for your next flight</p>
-
-                        </div>
-                        </div>
-                      </div>
-
-                      <div class="image">
-                        <div class="cadr">
-                        <img  src="image/photo2.png" alt="">
+            <div class="space-btw">
+                <div class="image">
+                    <div class="cadr1">
+                        <img src="image/Airlines Company Profile Presentation.png" alt="">
 
                         <div class="p-2">
-                            <h5>Fly in Comfort, Save with Us</h5>
-                            <p>ensuring comfort tailored to your needs</p>
-  
-                          </div>
+                            <h5>Explorez nos options de transportation</h5> 
+                            <p>Recherchez les meilleures offres pour votre prochain vol</p> 
                         </div>
-                      </div>
-
-
-                       
                     </div>
+                </div>
 
-        </div>
+                <div class="image">
+                    <div class="cadr">
+                        <img class="img1" src="image/blue.jpg" alt="">
 
-        <div class="section2">
-            
-            <div class="container">
+                        <div class="p-22">
+                            <h5>Découvrez le confort à bord </h5> 
+                            <p>sièges ergonomiques, divertissement personnel, service attentionné </p> 
+                        </div>
 
-                <section class="container">
-                    
-                    <div class="card__container swiper">
-                       <div class="card__content">
-                        <h4 style="color: aliceblue;">make your move with our packages </h4>
-                          <div class="swiper-wrapper">
-                             <article class="card__article swiper-slide">
-                                <div class="card__image">
-                                   <img src="image/photo14.png" alt="image" class="card__img">
-                                   <div class="card__shadow"></div>
-                                </div>
-                 
-                                <div class="card__data">
-                                   <h3 class="card__name">Couple</h3>
-                                   <p class="card__description">
-                                    Discounted airfare, priority boarding, and complimentary meals for two.
-                                   </p>
-                 
-                                   <a href="#" class="card__button">View More</a>
-                                </div>
-                             </article>
-                 
-                             <article class="card__article swiper-slide">
-                                <div class="card__image">
-                                   <img src="image/photo16.png" alt="image" class="card__img">
-                                   <div class="card__shadow"></div>
-                                </div>
-                 
-                                <div class="card__data">
-                                   <h3 class="card__name">friend</h3>
-                                   <p class="card__description">
-                                    Group discounts, flexible seating, shared luggage benefits, and complimentary snacks.
-                                   </p>
-                 
-                                   <a href="#" class="card__button">View More</a>
-                                </div>
-                             </article>
-                 
-                             <article class="card__article swiper-slide">
-                                <div class="card__image">
-                                   <img src="image/photo15.png" alt="image" class="card__img">
-                                   <div class="card__shadow"></div>
-                                </div>
-                 
-                                <div class="card__data">
-                                   <h3 class="card__name">family</h3>
-                                   <p class="card__description">
-                                    Special family seating, kid-friendly meals, additional baggage, and discounts.
-                                   </p>
-                 
-                                   <a href="#" class="card__button">View More</a>
-                                </div>
-                             </article>
-                 
-                             <article class="card__article swiper-slide">
-                                <div class="card__image">
-                                   <img src="image/photo14.png" alt="image" class="card__img">
-                                   <div class="card__shadow"></div>
-                                </div>
-                 
-                                <div class="card__data">
-                                   <h3 class="card__name">Couple</h3>
-                                   <p class="card__description">
-                                      Passionate about development and design, 
-                                      I carry out projects at the request of users.
-                                   </p>
-                 
-                                   <a href="#" class="card__button">View More</a>
-                                </div>
-                             </article>
-           
-                             <article class="card__article swiper-slide">
-                                <div class="card__image">
-                                   <img src="image/photo14.png" alt="image" class="card__img">
-                                   <div class="card__shadow"></div>
-                                </div>
-                 
-                                <div class="card__data">
-                                   <h3 class="card__name">Lexa Kin</h3>
-                                   <p class="card__description">
-                                      Passionate about development and design, 
-                                      I carry out projects at the request of users.
-                                   </p>
-                 
-                                   <a href="#" class="card__button">View More</a>
-                                </div>
-                             </article>
-                          </div>
-                       </div>
-           
-                       <!-- Navigation buttons -->
-                       <div class="swiper-button-next">
-                          <i class="ri-arrow-right-s-line"></i>
-                       </div>
-                       
-                       <div class="swiper-button-prev">
-                          <i class="ri-arrow-left-s-line"></i>
-                       </div>
-           
-                       <!-- Pagination -->
-                       <div class="swiper-pagination"></div>
                     </div>
-                 </section>
-
-
-
+                </div>
             </div>
 
-        
-        </div>
+            <div class="space-btw">
+                <div class="image">
+                    <div class="cadr">
+                        <img class="img1" src="image/tran (1).png" alt="">
 
+                        <div class="p-22">
+                            <h5>Volez confortablement</h5> 
+                            <p>Assurant un confort adapté à vos besoins</p> 
+                        </div>
 
-
-
-        <div class="section3">
-
-            <div class="container">
-
-
-
-                <h4 class="mt-3" style="color: rgb(25, 3, 55); margin: 20px; font-weight: bold;">Trending destinations</h4>
-
-                <div class="row">
-                    <div class="col">
-                   <img src="image/photo20.png" alt="">
                     </div>
-                    <div class="col">
-                        <img src="image/photo21.png" alt="">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                        <img src="image/photo22.png" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="image/photo23.png" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="image/photo24.png" alt="">
-                    </div>
-                  </div>
+                </div>
 
+                <div class="image">
+                    <div class="cadr1">
+                        <img src="image/tran (2).png" alt="">
 
+                        <div class="p-2">
+                            <h5>Volez confortablement, économisez avec nous</h5> 
+                            <p>Assurant un confort adapté à vos besoins</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </div>
+    </div>
 
+    <div class="section2">
+        <div class="container">
+            <section class="container">
+                <div class="card__container swiper">
+                    <div class="card__content">
+                        <h4 style="color: aliceblue;">Faites votre choix avec nos forfaits</h4> <!-- Translated "Make your move with our packages" -->
+                        <div class="swiper-wrapper">
+                            <!-- Card Articles, Example Translations -->
+                            <article class="card__article swiper-slide">
+                                <div class="card__image">
+                                    <img src="image/photo14.png" alt="image" class="card__img">
+                                    <div class="card__shadow"></div>
+                                </div>
 
-        <footer class="section4 d-flex  align-items-end">
-            <div class="container ">
+                                <div class="card__data">
+                                    <h3 class="card__name">Couple</h3> <!-- Translated "Couple" -->
+                                    <p class="card__description">
+                                        Tarifs réduits pour les billets d'avion, embarquement prioritaire et repas gratuits pour deux.
+                                    </p> <!-- Translated Description -->
+                                    <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
+                                </div>
+                            </article>
+                
+                        </div>
+                    </div>
 
-                <h6 style="color: aliceblue;">© 2024 NBR airways. All rights reserved.</h6>
+                    <!-- Navigation buttons -->
+                
 
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="container">
+            <h4 class="mt-3" style="color: rgb(25, 3, 55); margin: 20px; font-weight: bold;">Destinations tendance</h4> <!-- Translated "Trending destinations" -->
+
+            <div class="row">
+                <div class="col">
+                    <img src="image/photo20.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="image/photo21.png" alt="">
+                </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col">
+                    <img src="image/photo22.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="image/photo23.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="image/photo24.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="section4 d-flex align-items-end">
+        <div class="container">
+            <h6 style="color: aliceblue;">© 2024 NBR Airways. Tous droits réservés.</h6> <!-- Translated "All rights reserved" -->
+        </div>
+    </footer>
 
 
 
+    
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
 
 
-<script src="assets/js/swiper-bundle.min.js"></script>
 
-<!--=============== MAIN JS ===============-->
-<script src="assets/js/main.js"></script>
     
 </body>
 </html>
-
-
-
-
-
-
-<script>
-    const headerElement = document.querySelector('.header');
-    const formElement = document.querySelector('.border');
-    
-    // Define an array of background image URLs
-    const headerImages = [
-        'image/img.png',
-        'image/img2.png',
-        'image/img3.png'
-    ];
-
-
-    let currentIndex = 0;
-
-
-    function updateBackgrounds() {
-        headerElement.style.backgroundImage = `url('${headerImages[currentIndex]}')`;
-        formElement.style.backgroundImage = `url('${formImages[currentIndex]}')`;
-    }
-
-   
-    document.querySelector('.icon-left').addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? headerImages.length - 1 : currentIndex - 1;
-        updateBackgrounds();
-    });
-
-    document.querySelector('.icon-right').addEventListener('click', () => {
-        currentIndex = (currentIndex === headerImages.length - 1) ? 0 : currentIndex + 1;
-        updateBackgrounds();
-    });
-
-
-
-  
-  flatpickr("#date-input", {
-    dateFormat: "Y-m-d",  // Customize date format
-    altInput: true,
-    altFormat: "F j, Y",  // Custom display format
-    theme: "light",       // You can also apply a theme
-  });
-
-</script>
