@@ -17,7 +17,8 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
    <!-- Include Flatpickr JavaScript -->
-   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -29,33 +30,52 @@
     <title>NBR Airways – Réservez des vols</title> <!-- Updated the title -->
 </head>
 <body>
+
     <header>
         <div class="container">
             <div class="logo">
-                <img src="image/Assdet 3.png" alt="">
+                <img src="image/Assdet 3.png" alt="Logo">
             </div>
-
+    
+            <!-- Hamburger Icon for Mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+    
             <nav>
                 <ul>
-                    <li><a class="active" href="">Accueil</a></li> <!-- Translated "Home" -->
-                    <li><a href="">Enregistrement</a></li> <!-- Translated "Check-in" -->
-                    <li><a href="">Programme</a></li> <!-- Translated "Flight Schedule" -->
+                    <li><a class="active" href="">Accueil</a></li>
+                    <li><a href="">Programme</a></li>
                     <li><a href="">Destination</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
-
-              
             </nav>
-
-
+    
             <div class="menu">
-                <button>Fr <i style="font-size: 11px;" class="fa-solid fa-chevron-down"></i></button> <!-- Language button (French) -->
-                <button>Se connecter <i class="fa-solid fa-user"></i></button> <!-- Translated "Login" -->
-            </div> 
-
-           
+                <!-- Language Selection Dropdown -->
+                <div class="language-dropdown">
+                    <button onclick="toggleLanguageDropdown()">Fr <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="language-dropdown-menu" class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('ar')">Arabe</a>
+                        <a href="#" onclick="changeLanguage('fr')">Français</a>
+                        <a href="#" onclick="changeLanguage('es')">Español</a>
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                    </div>
+                </div>
+    
+                <!-- Login Dropdown -->
+                <div class="language-dropdown">
+                    <button onclick="toggleLoginDropdown()">Se connecter <i class="fa-solid fa-user"></i></button> 
+                    <div id="login-dropdown-menu" class="dropdown-content">
+                        <a href="#" onclick="handleLogin()">Se connecter</a>
+                        <a href="#" onclick="handleSignUp()">Créer un compte</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
+
+
 
     <div class="landing">
         <div class="overlay"></div>
@@ -64,7 +84,7 @@
             <div class="grid-container">
                 <div class="button">
                     <button>Acheter un billet</button> <!-- Translated "Buy Ticket" -->
-                    <button class="b1">Ajouter une carte</button> <!-- Translated "Add Card" -->
+                    <button class="b1">Enregistrement</button> <!-- Translated "Add Card" -->
                 </div>
             </div>
 
@@ -128,17 +148,34 @@
         </div>
     </div>
 
+
+    <div class="party">
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper party">
+                <div class="swiper-slide"><img src="image/la faite/1.png" alt=""></div>
+                <div class="swiper-slide"><img src="image/la faite/2.png" alt=""></div>
+                <div class="swiper-slide"><img src="image/la faite/3.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </div>
+
+
+
     <div class="section">
         <div class="container">
             <div class="element">
-                <div class="image">
-                    <img src="image/Artboardfdfd 1@4x.png" alt="">
-                </div>
-
                 <div class="text">
                     <h5>Explorez le monde avec notre <br>nouvelle carte</h5> <!-- Translated "explore the world with our new card" -->
-
-                    <button>Obtenez la carte</button> <!-- Translated "Get the card" -->
+                    <button>Lire plus</button> <!-- Translated "Get the card" -->
+                </div>
+    
+                <div class="image">
+                    <img src="image/Artboardfdfd 1@4x.png" alt="">
                 </div>
             </div>
         </div>
@@ -202,6 +239,7 @@
         </div>
     </div>
 
+
     <div class="section2">
         <div class="container">
             <section class="container">
@@ -213,9 +251,8 @@
                             <article class="card__article swiper-slide">
                                 <div class="card__image">
                                     <img src="image/photo14.png" alt="image" class="card__img">
-                                    <div class="card__shadow"></div>
+                                   
                                 </div>
-
                                 <div class="card__data">
                                     <h3 class="card__name">Couple</h3> <!-- Translated "Couple" -->
                                     <p class="card__description">
@@ -224,19 +261,47 @@
                                     <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
                                 </div>
                             </article>
-                
+                            <!-- Repeat for additional cards -->
+                            <article class="card__article swiper-slide">
+                                <div class="card__image">
+                                    <img src="image/photo14.png" alt="image" class="card__img">
+                               
+                                </div>
+                                <div class="card__data">
+                                    <h3 class="card__name">Famille</h3> <!-- Translated "Family" -->
+                                    <p class="card__description">
+                                        Tarifs réduits pour les billets d'avion, embarquement prioritaire et repas gratuits pour deux.
+                                    </p> <!-- Translated Description -->
+                                    <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
+                                </div>
+                            </article>
+                            <article class="card__article swiper-slide">
+                                <div class="card__image">
+                                    <img src="image/photo14.png" alt="image" class="card__img">
+                              
+                                </div>
+                                <div class="card__data">
+                                    <h3 class="card__name">Ami</h3> <!-- Translated "Friend" -->
+                                    <p class="card__description">
+                                        Tarifs réduits pour les billets d'avion, embarquement prioritaire et repas gratuits pour deux.
+                                    </p> <!-- Translated Description -->
+                                    <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
+                                </div>
+                            </article>
                         </div>
+    
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+    
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
-
-                    <!-- Navigation buttons -->
-                
-
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
                 </div>
             </section>
         </div>
     </div>
+
 
     <div class="section3">
         <div class="container">
@@ -282,4 +347,88 @@
 
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+
+
+    // Toggle Language Dropdown
+    function toggleLanguageDropdown() {
+        closeAllDropdowns();
+        document.getElementById("language-dropdown-menu").classList.toggle("show");
+    }
+
+    // Toggle Login Dropdown
+    function toggleLoginDropdown() {
+        closeAllDropdowns();
+        document.getElementById("login-dropdown-menu").classList.toggle("show");
+    }
+
+    // Close All Dropdowns
+    function closeAllDropdowns() {
+        const dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+    }
+
+    // Toggle Mobile Menu
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('header nav ul');
+        const menuContainer = document.querySelector('header .menu');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        // Toggle menu display
+        navMenu.classList.toggle('active');
+        menuContainer.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
+
+    // Close dropdowns on outside click
+    window.onclick = function(event) {
+        if (!event.target.closest('.language-dropdown') && !event.target.closest('.menu-toggle')) {
+            closeAllDropdowns();
+        }
+    }
+
+    // Handle Language Change
+    function changeLanguage(languageCode) {
+        console.log("Changing language to: " + languageCode);
+        // Language change logic here
+    }
+
+    // Handle Login Navigation
+    function handleLogin() {
+        console.log("Navigating to login page...");
+        // Add your login functionality or redirect here
+    }
+
+    // Handle Sign-Up Navigation
+    function handleSignUp() {
+        console.log("Navigating to sign up page...");
+        // Add your sign-up functionality or redirect here
+    }
+
+    // Add event listener for mobile menu toggle button
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        menuToggle.addEventListener('click', toggleMobileMenu);
+    });
+
+
+
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // Enables looping of slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        centeredSlides: true, // Center the active slide
+        slidesPerView: 1.2, // Show one full slide and a part of the next slide
+        spaceBetween: 30, // Space between slides
+    });
+
+</script>
+
 </html>
