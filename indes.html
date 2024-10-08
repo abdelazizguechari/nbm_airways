@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Change 'en' to 'fr' for French -->
+<html lang="fr"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-   <!--=============== REMIXICONS ===============-->
+ 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
 
-   <!--=============== SWIPER CSS ===============-->
+
    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-   <!-- Include Flatpickr JavaScript -->
    
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
@@ -27,9 +26,11 @@
     <link rel="stylesheet" href="assets/css/styler.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
-    <title>NBR Airways – Réservez des vols</title> <!-- Updated the title -->
+    <title>NBR Airways – Réservez des vols</title> 
 </head>
 <body>
+
+    <!-- header -->
 
     <header>
         <div class="container">
@@ -37,7 +38,7 @@
                 <img src="image/Assdet 3.png" alt="Logo">
             </div>
     
-            <!-- Hamburger Icon for Mobile -->
+   
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -52,7 +53,7 @@
             </nav>
     
             <div class="menu">
-                <!-- Language Selection Dropdown -->
+            
                 <div class="language-dropdown">
                     <button onclick="toggleLanguageDropdown()">Fr <i class="fa-solid fa-chevron-down"></i></button>
                     <div id="language-dropdown-menu" class="dropdown-content">
@@ -63,7 +64,6 @@
                     </div>
                 </div>
     
-                <!-- Login Dropdown -->
                 <div class="language-dropdown">
                     <button onclick="toggleLoginDropdown()">Se connecter <i class="fa-solid fa-user"></i></button> 
                     <div id="login-dropdown-menu" class="dropdown-content">
@@ -75,7 +75,11 @@
         </div>
     </header>
 
+    <!-- end header -->
 
+
+
+     <!-- landing -->
 
     <div class="landing">
         <div class="overlay"></div>
@@ -83,8 +87,8 @@
         <div class="container">
             <div class="grid-container">
                 <div class="button">
-                    <button>Acheter un billet</button> <!-- Translated "Buy Ticket" -->
-                    <button class="b1">Enregistrement</button> <!-- Translated "Add Card" -->
+                    <button>Acheter un billet</button>
+                    <button class="b1">Enregistrement</button> 
                 </div>
             </div>
 
@@ -94,13 +98,13 @@
                         <div class="row mb-6">
                             <div class="col-md-6">
                                 <select class="form-control" name="" id="">
-                                    <option value="">Aller-retour</option> <!-- Translated "Round trip" -->
-                                    <option value="">Aller simple</option> <!-- Translated "One-way" -->
-                                    <option value="">Multi-destinations</option> <!-- Translated "Multi-city" -->
+                                    <option value="">Aller-retour</option> 
+                                    <option value="">Aller simple</option> 
+                                    <option value="">Multi-destinations</option> 
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <input type="date" class="form-control" placeholder="Date de voyage"> <!-- Translated "Travel date" -->
+                                <input type="date" class="form-control" placeholder="Date de voyage">
                             </div>
                         </div>
 
@@ -110,8 +114,8 @@
                                 <div class="input-icon">
                                     <input type="text" class="form-control" placeholder="Départ de"> 
                                    <i class="fa-solid fa-plane-departure"></i> 
-                               </div><!-- Translated "Departing from" -->
-                            <!-- Translated "Arriving at" -->
+                               </div>
+                          
                             </div>
                             <div class="col-md-4">
 
@@ -123,16 +127,16 @@
                                 
                             </div>
                             <div class="col-md-4">
-                                <input type="text" class="form-control" placeholder="1 adulte"> <!-- Translated "1 Adult" -->
+                                <input type="text" class="form-control" placeholder="1 adulte"> 
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12">
                                 <select class="form-control" name="" id="">
-                                    <option value="">Économique</option> <!-- Translated "Economy" -->
+                                    <option value="">Économique</option> 
                                     <option value="">Premium</option>
-                                    <option value="">Affaires</option> <!-- Translated "Business" -->
+                                    <option value="">Affaires</option> 
                                 </select>
                             </div>
 
@@ -140,7 +144,7 @@
                         </div>
 
                         <div style="position: absolute; left: 61%;" class="row justify-content-end">
-                            <input  class="custom-button p-2" type="submit" value="Rechercher" /> <!-- Translated "Search flights" -->
+                            <input  class="custom-button p-2" type="submit" value="Rechercher" /> 
                         </div>
                     </form>
                 </div>
@@ -148,13 +152,17 @@
         </div>
     </div>
 
+      <!-- end landing  -->
+
+
+   <!-- event -->
 
     <div class="party">
 
         <div class="swiper-container">
             <div class="swiper-wrapper party">
-                <div class="swiper-slide"> <a href="grilli-master/index.html"> <img src="image/la faite/4.png" alt=""> </a> </div>
-                <div class="swiper-slide"><img src="image/la faite/2.png" alt=""></div>
+                <div class="swiper-slide"> <a href="event/index.html"> <img src="image/la faite/4.png" alt=""> </a> </div>
+                <div class="swiper-slide"><a href="event/dubai.html"> <img src="image/la faite/1.png" alt=""> </a></div>
                 <div class="swiper-slide"><img src="image/la faite/3.png" alt=""></div>
             </div>
             <div class="swiper-pagination"></div>
@@ -163,15 +171,21 @@
         </div>
 
     </div>
+    
+      <!-- end event -->
+    
 
+
+
+      
 
 
     <div class="section">
         <div class="container">
             <div class="element">
                 <div class="text">
-                    <h5>Explorez le monde avec notre <br>nouvelle carte</h5> <!-- Translated "explore the world with our new card" -->
-                    <button>Lire plus</button> <!-- Translated "Get the card" -->
+                    <h5>Explorez le monde avec notre <br>nouvelle carte</h5> 
+                    <button>Lire plus</button> 
                 </div>
     
                 <div class="image">
@@ -245,34 +259,34 @@
             <section class="container">
                 <div class="card__container swiper">
                     <div class="card__content">
-                        <h4 style="color: aliceblue;">Faites votre choix avec nos forfaits</h4> <!-- Translated "Make your move with our packages" -->
+                        <h4 style="color: aliceblue;">Faites votre choix avec nos forfaits</h4>
                         <div class="swiper-wrapper">
-                            <!-- Card Articles, Example Translations -->
+                          
                             <article class="card__article swiper-slide">
                                 <div class="card__image">
                                     <img src="image/photo14.png" alt="image" class="card__img">
                                    
                                 </div>
                                 <div class="card__data">
-                                    <h3 class="card__name">Couple</h3> <!-- Translated "Couple" -->
+                                    <h3 class="card__name">Couple</h3> 
                                     <p class="card__description">
                                         Tarifs réduits pour les billets d'avion, embarquement prioritaire et repas gratuits pour deux.
-                                    </p> <!-- Translated Description -->
-                                    <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
+                                    </p> 
+                                    <a href="#" class="card__button">Voir plus</a> 
                                 </div>
                             </article>
-                            <!-- Repeat for additional cards -->
+                  
                             <article class="card__article swiper-slide">
                                 <div class="card__image">
                                     <img src="image/photo14.png" alt="image" class="card__img">
                                
                                 </div>
                                 <div class="card__data">
-                                    <h3 class="card__name">Famille</h3> <!-- Translated "Family" -->
+                                    <h3 class="card__name">Famille</h3>
                                     <p class="card__description">
                                         Tarifs réduits pour les billets d'avion, embarquement prioritaire et repas gratuits pour deux.
-                                    </p> <!-- Translated Description -->
-                                    <a href="#" class="card__button">Voir plus</a> <!-- Translated "View More" -->
+                                    </p> 
+                                    <a href="#" class="card__button">Voir plus</a> 
                                 </div>
                             </article>
                             <article class="card__article swiper-slide">
@@ -290,11 +304,11 @@
                             </article>
                         </div>
     
-                        <!-- Navigation buttons -->
+          
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
     
-                        <!-- Pagination -->
+                      
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
