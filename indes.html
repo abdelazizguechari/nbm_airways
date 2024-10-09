@@ -47,6 +47,7 @@
                 <ul>
                     <li><a class="active" href="">Accueil</a></li>
                     <li><a href="">Programme</a></li>
+                    <li><a href="recrutement.html">recrutement</a></li>
                     <li><a href="">Destination</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
@@ -342,12 +343,133 @@
             </div>
         </div>
     </div>
-
-    <footer class="section4 d-flex align-items-end">
-        <div class="container">
-            <h6 style="color: aliceblue;">© 2024 NBR Airways. Tous droits réservés.</h6> <!-- Translated "All rights reserved" -->
+    <footer class="footer section has-bg-image text-center"
+    style="background-image: url('/event/assets/images/footer/footer1.png')">
+  <div class="container">
+  
+    <div class="footer-top grid-list">
+  
+      <div class="footer-brand has-before has-after">
+  
+        <a href="#" class="logo">
+          <img src="./assets/images/Assdet 3.png" width="160" height="50" loading="lazy" alt="nbr airways logo">
+        </a>
+  
+        <address class="body-4">
+          NBR Airways, Airline Hub, London 9578, UK
+        </address>
+  
+        <a href="mailto:contact@nbrairways.com" class="body-4 contact-link">contact@nbrairways.com</a>
+  
+        <a href="tel:+880123123456" class="body-4 contact-link">Customer Support : +88-0123-123456</a>
+  
+        <p class="body-4">
+          Available 24/7 for Your Convenience
+        </p>
+  
+        <div class="wrapper">
+          <div class="separator"></div>
+          <div class="separator"></div>
+          <div class="separator"></div>
         </div>
-    </footer>
+  
+        <p class="title-1">Get the Latest Updates</p>
+  
+        <p class="label-1">
+          Subscribe & Receive <span class="span">Exclusive Offers</span>
+        </p>
+  
+        <form action="" class="input-wrapper">
+          <div class="icon-wrapper">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+  
+            <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
+          </div>
+  
+          <button type="submit" class="btn btn-secondary">
+            <span class="text text-1">Subscribe</span>
+            <span class="text text-2" aria-hidden="true">Subscribe</span>
+          </button>
+        </form>
+  
+      </div>
+  
+      <ul class="footer-list">
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Home</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Destinations</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Our Fleet</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+        </li>
+      </ul>
+  
+      <ul class="footer-list">
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">LinkedIn</a>
+        </li>
+        <li>
+          <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+        </li>
+      </ul>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2022 NBR Airways. All Rights Reserved 
+        
+      </p>
+    </div>
+  
+  </div>
+  </footer>
+  
+  
+  
+  
+  
+    <!-- 
+      - #BACK TO TOP
+    -->
+  
+    <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+  
+  
+  
+  
+  
+    <!-- 
+      - custom js link
+    -->
+    <script src="./assets/js/script.js"></script>
+  
+    <!-- 
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
 
 
 
@@ -362,87 +484,6 @@
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-
-
-    // Toggle Language Dropdown
-    function toggleLanguageDropdown() {
-        closeAllDropdowns();
-        document.getElementById("language-dropdown-menu").classList.toggle("show");
-    }
-
-    // Toggle Login Dropdown
-    function toggleLoginDropdown() {
-        closeAllDropdowns();
-        document.getElementById("login-dropdown-menu").classList.toggle("show");
-    }
-
-    // Close All Dropdowns
-    function closeAllDropdowns() {
-        const dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
-    }
-
-    // Toggle Mobile Menu
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('header nav ul');
-        const menuContainer = document.querySelector('header .menu');
-        const menuToggle = document.querySelector('.menu-toggle');
-
-        // Toggle menu display
-        navMenu.classList.toggle('active');
-        menuContainer.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-    }
-
-    // Close dropdowns on outside click
-    window.onclick = function(event) {
-        if (!event.target.closest('.language-dropdown') && !event.target.closest('.menu-toggle')) {
-            closeAllDropdowns();
-        }
-    }
-
-    // Handle Language Change
-    function changeLanguage(languageCode) {
-        console.log("Changing language to: " + languageCode);
-        // Language change logic here
-    }
-
-    // Handle Login Navigation
-    function handleLogin() {
-        console.log("Navigating to login page...");
-        // Add your login functionality or redirect here
-    }
-
-    // Handle Sign-Up Navigation
-    function handleSignUp() {
-        console.log("Navigating to sign up page...");
-        // Add your sign-up functionality or redirect here
-    }
-
-    // Add event listener for mobile menu toggle button
-    document.addEventListener("DOMContentLoaded", function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        menuToggle.addEventListener('click', toggleMobileMenu);
-    });
-
-
-
-    const swiper = new Swiper('.swiper-container', {
-        loop: true, // Enables looping of slides
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        centeredSlides: true, // Center the active slide
-        slidesPerView: 1.2, // Show one full slide and a part of the next slide
-        spaceBetween: 30, // Space between slides
-    });
-
-</script>
+<script src="assets/js/main.js"></script>
 
 </html>

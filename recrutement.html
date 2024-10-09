@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site web de NBR Airways pour réserver des vols">
+    <meta name="keywords" content="vols, billets, voyage, NBR Airways">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+ 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+   
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styler.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <title>NBR Airways – Réservez des vols</title> 
+</head>
+<body>
+
+    <!-- header -->
+
+    <header class="bg-dark">
+        <div class="container">
+            <div class="logo">
+                <img src="image/Assdet 3.png" alt="Logo">
+            </div>
+    
+   
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a  href="indes.html">Accueil</a></li>
+                    <li><a href="">Programme</a></li>
+                    <li><a class="active" href="recrutement.html">recrutement</a></li>
+                    <li><a href="">Destination</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="menu">
+            
+                <div class="language-dropdown">
+                    <button onclick="toggleLanguageDropdown()">Fr <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="language-dropdown-menu" class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('ar')">Arabe</a>
+                        <a href="#" onclick="changeLanguage('fr')">Français</a>
+                        <a href="#" onclick="changeLanguage('es')">Español</a>
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                    </div>
+                </div>
+    
+                <div class="language-dropdown">
+                    <button onclick="toggleLoginDropdown()">Se connecter <i class="fa-solid fa-user"></i></button> 
+                    <div id="login-dropdown-menu" class="dropdown-content">
+                        <a href="#" onclick="handleLogin()">Se connecter</a>
+                        <a href="#" onclick="handleSignUp()">Créer un compte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
