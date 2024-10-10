@@ -1,11 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/*-----------------------------------*\
-  #index.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
 
 
 
@@ -462,68 +458,33 @@ justify-content: center;
   top: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  animation: change 30s infinite ease-in-out; /* Increased duration for smoother transitions */
-  will-change: background-image, transform; /* Optimize for performance */
+  overflow: hidden;
 }
 
-@keyframes change {
-  0% {
-      background-image: url("../../image/landing/parent.jpg");
-      transform: scale(1); /* Normal size */
-  }
-
-  15% {
-      background-image: url("../../image/landing/parent.jpg");
-      transform: scale(1.05); /* Zoom in slightly */
-  }
-
-  20% {
-      background-image: url("../../image/landing/imgzf.jpg");
-      transform: scale(1); /* Transition to the second image */
-  }
-
-  35% {
-      background-image: url("../../image/landing/imgzf.jpg");
-      transform: scale(1.05); /* Zoom in slightly */
-  }
-
-  40% {
-      background-image: url("../../image/landing/imgz2.png");
-      transform: scale(1); /* Transition to the third image */
-  }
-
-  55% {
-      background-image: url("../../image/landing/imgz2.png");
-      transform: scale(1.05); /* Zoom in slightly */
-  }
-
-  60% {
-      background-image: url("../../image/landing/imgz5.png");
-      transform: scale(1); /* Transition to the fourth image */
-  }
-
-  75% {
-      background-image: url("../../image/landing/imgz5.png");
-      transform: scale(1.05); /* Zoom in slightly */
-  }
-
-  80% {
-      background-image: url("../../image/landing/img9.jpeg");
-      transform: scale(1); /* Transition to the last image */
-  }
-
-  95% {
-      background-image: url("../../image/landing/img9.jpeg");
-      transform: scale(1.05); /* Zoom in slightly */
-  }
-
-  100% {
-      background-image: url("../../image/landing/parent.jpg"); /* Loop back to the first image */
-      transform: scale(1); /* Normal size */
-  }
+.overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: smoothScaleFade 35s infinite ease-in-out; /* Adjust for total cycle time */
 }
+
+.overlay-img:nth-child(1) { animation-delay: 0s; }
+.overlay-img:nth-child(2) { animation-delay: 7s; }
+.overlay-img:nth-child(3) { animation-delay: 14s; }
+.overlay-img:nth-child(4) { animation-delay: 21s; }
+.overlay-img:nth-child(5) { animation-delay: 28s; }
+
+@keyframes smoothScaleFade {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  5% { opacity: 1; transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.15); } /* Smooth scaling */
+  50% { opacity: 0; transform: scale(1.15); }
+}
+
 
 .landing .container {
 

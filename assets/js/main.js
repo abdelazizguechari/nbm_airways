@@ -116,3 +116,21 @@ let swiperCards = new Swiper(".card__content", {
       slidesPerView: 1.2, // Show one full slide and a part of the next slide
       spaceBetween: 30, // Space between slides
   });
+
+
+
+  fetch('hf/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
+  })
+  .catch(error => console.error('Error loading header:', error));
+
+
+
+  fetch('hf/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  })
+  .catch(error => console.error('Error loading footer:', error));

@@ -32,49 +32,8 @@
 
     <!-- header -->
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="image/Assdet 3.png" alt="Logo">
-            </div>
-    
    
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-    
-            <nav>
-                <ul>
-                    <li><a class="active" href="">Accueil</a></li>
-                    <li><a href="">Programme</a></li>
-                    <li><a href="recrutement.html">recrutement</a></li>
-                    <li><a href="">Destination</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-    
-            <div class="menu">
-            
-                <div class="language-dropdown">
-                    <button onclick="toggleLanguageDropdown()">Fr <i class="fa-solid fa-chevron-down"></i></button>
-                    <div id="language-dropdown-menu" class="dropdown-content">
-                        <a href="#" onclick="changeLanguage('ar')">Arabe</a>
-                        <a href="#" onclick="changeLanguage('fr')">Français</a>
-                        <a href="#" onclick="changeLanguage('es')">Español</a>
-                        <a href="#" onclick="changeLanguage('en')">English</a>
-                    </div>
-                </div>
-    
-                <div class="language-dropdown">
-                    <button onclick="toggleLoginDropdown()">Se connecter <i class="fa-solid fa-user"></i></button> 
-                    <div id="login-dropdown-menu" class="dropdown-content">
-                        <a href="#" onclick="handleLogin()">Se connecter</a>
-                        <a href="#" onclick="handleSignUp()">Créer un compte</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<div id="header-placeholder"></div>
 
     <!-- end header -->
 
@@ -83,7 +42,15 @@
      <!-- landing -->
 
     <div class="landing">
-        <div class="overlay"></div>
+
+
+        <div class="overlay">
+            <img src="/image/landing/parent.jpg" class="overlay-img" alt="Image 1">
+            <img src="/image/landing/imgzf.jpg" class="overlay-img" alt="Image 2">
+            <img src="/image/landing/imgz2.png" class="overlay-img" alt="Image 3">
+            <img src="/image/landing/imgz5.png" class="overlay-img" alt="Image 4">
+            <img src="/image/landing/img9.jpeg" class="overlay-img" alt="Image 5">
+        </div>
 
         <div class="container">
             <div class="grid-container">
@@ -162,9 +129,9 @@
 
         <div class="swiper-container">
             <div class="swiper-wrapper party">
-                <div class="swiper-slide"> <a href="event/index.html"> <img src="image/la faite/4.png" alt=""> </a> </div>
-                <div class="swiper-slide"><a href="event/dubai.html"> <img src="image/la faite/1.png" alt=""> </a></div>
-                <div class="swiper-slide"><img src="image/la faite/3.png" alt=""></div>
+                <div class="swiper-slide"> <a href="event/dubai.html"> <img src="image/la faite/1.png" alt=""> </a> </div>
+                <div class="swiper-slide"><a href="event/italy.html"> <img src="image/la faite/2.png" alt=""> </a></div>
+                <div class="swiper-slide"> <a href="event/index.html"> <img src="image/la faite/4.png" alt=""> </a></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -343,104 +310,10 @@
             </div>
         </div>
     </div>
-    <footer class="footer section has-bg-image text-center"
-    style="background-image: url('/event/assets/images/footer/footer1.png')">
-  <div class="container">
-  
-    <div class="footer-top grid-list">
-  
-      <div class="footer-brand has-before has-after">
-  
-        <a href="#" class="logo">
-          <img src="./assets/images/Assdet 3.png" width="160" height="50" loading="lazy" alt="nbr airways logo">
-        </a>
-  
-        <address class="body-4">
-          NBR Airways, Airline Hub, London 9578, UK
-        </address>
-  
-        <a href="mailto:contact@nbrairways.com" class="body-4 contact-link">contact@nbrairways.com</a>
-  
-        <a href="tel:+880123123456" class="body-4 contact-link">Customer Support : +88-0123-123456</a>
-  
-        <p class="body-4">
-          Available 24/7 for Your Convenience
-        </p>
-  
-        <div class="wrapper">
-          <div class="separator"></div>
-          <div class="separator"></div>
-          <div class="separator"></div>
-        </div>
-  
-        <p class="title-1">Get the Latest Updates</p>
-  
-        <p class="label-1">
-          Subscribe & Receive <span class="span">Exclusive Offers</span>
-        </p>
-  
-        <form action="" class="input-wrapper">
-          <div class="icon-wrapper">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-  
-            <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
-          </div>
-  
-          <button type="submit" class="btn btn-secondary">
-            <span class="text text-1">Subscribe</span>
-            <span class="text text-2" aria-hidden="true">Subscribe</span>
-          </button>
-        </form>
-  
-      </div>
-  
-      <ul class="footer-list">
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Home</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Destinations</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">About Us</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Our Fleet</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Contact</a>
-        </li>
-      </ul>
-  
-      <ul class="footer-list">
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">LinkedIn</a>
-        </li>
-        <li>
-          <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
-        </li>
-      </ul>
-  
-    </div>
-  
-    <div class="footer-bottom">
-      <p class="copyright">
-        &copy; 2022 NBR Airways. All Rights Reserved 
-        
-      </p>
-    </div>
-  
-  </div>
-  </footer>
+
+
+
+
   
   
   
@@ -485,5 +358,9 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+
+</script>
 
 </html>

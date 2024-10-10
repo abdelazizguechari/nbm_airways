@@ -1,77 +1,655 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site web de NBR Airways pour réserver des vols">
-    <meta name="keywords" content="vols, billets, voyage, NBR Airways">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offres de Recrutement</title>
+  <link rel="stylesheet" href="/dist/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Load fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="URL_FOR_FORUM_FONT" rel="stylesheet"> <!-- Replace with actual URL for Forum -->
 
- 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: auto; /* Allow scrolling */
+      font-family: var(--fontFamily-dm_sans); /* Use DM Sans as default font */
+    }
+
+    /* Custom Font Families */
+    :root {
+      --fontFamily-forum: 'Forum', cursive;
+      --fontFamily-dm_sans: 'DM Sans', sans-serif;
+    }
+    .slider {
+      width: 100%;
+      height: 100vh; /* Use full viewport height */
+      position: relative; /* Position relative for absolute children */
+      overflow: hidden; /* Hide overflowing elements */
+    }
+
+    .slide {
+      display: none; /* Hide all slides by default */
+      position: absolute; /* Position slides absolutely */
+      width: 100%;
+      height: 100%;
+      justify-content: center; /* Center text horizontally */
+      align-items: center; /* Center text vertically */
+      transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    }
+
+    .activer {
+      display: flex; /* Display the active slide */
+      animation: smoothScale 7s linear forwards; /* Background scale animation */
+    }
+
+    .inactive {
+      opacity: 0; /* Completely transparent */
+    }
+
+    .card {
+    width: 30%; /* Adjusted width for three cards per row */
+    height: 150px; /* Fixed height for consistency */
+    transition: flex-grow 0.3s ease, width 0.3s ease; /* Transition for smooth growth */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    overflow: hidden; /* Hide overflow for non-hovered cards */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.card:hover {
+    flex-grow: 1; /* Allow the hovered card to grow */
+    width: 35%; /* Increased width on hover */
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s; /* Transition for icon size */
+}
+
+.card h3 {
+    display: block; /* Show title when not hovered */
+}
+
+.card p {
+    display: none; /* Hide text when not hovered */
+}
+
+.card:hover h3,
+.card:hover p {
+    display: block; /* Show text when hovered */
+}
+
+.card:hover .icon-wrapper {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+.flex {
+    display: flex; /* Ensures the flex display is applied */ }
 
 
-   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    @keyframes smoothScale {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.15); }
+    }
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    .text-container {
+      position: absolute; /* Position text container absolutely */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust for centering */
+      z-index: 10; /* Bring text in front of images */
+      color: white; /* Text color */
+      text-align: center; /* Center text */
+      opacity: 0; /* Initially hidden */
+      animation: sliderReveal 1s ease forwards; /* Text reveal animation */
+    }
 
-   
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styler.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <title>NBR Airways – Réservez des vols</title> 
+    @keyframes sliderReveal {
+      0% {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- header -->
+<div id="header-placeholder"></div>
 
-    <header class="bg-dark">
-        <div class="container">
-            <div class="logo">
-                <img src="image/Assdet 3.png" alt="Logo">
-            </div>
+<section class="h-screen flex justify-center items-center relative bg-violet-700">
+    <div class="slider">
+      <div class="slide activer">
+        <img src="/image/rect/r1.png" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="text-container">
+          <p class="text-gray-50 text-7xl">Une carrière qui transforme votre vie !</p>
+          <p class="text-gray-50 text-lg mt-9">Rejoignez-nous pour des défis passionnants et un avenir radieux!</p>
+        </div>
+      </div>
+      <div class="slide inactive">
+        <img src="/image/rect/r2.png" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="text-container">
+          <p class="text-gray-50 text-7xl">Offres irrésistibles vous attendent!</p>
+          <p class="text-gray-50 text-lg mt-9">Faites partie d'une équipe dynamique et innovante. Votre avenir commence ici!</p>
+        </div>
+      </div>
+      <div class="slide inactive">
+        <img src="/image/rect/r3.png" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="text-container">
+          <p class="text-gray-50 text-7xl">Nous cherchons des talents comme le vôtre!</p>
+          <p class="text-gray-50 text-lg mt-9">Bénéficiez d'une croissance personnelle et professionnelle dans un environnement collaboratif!</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<article>
+    <section class="min-h-screen bg-[#0E010C]">
+        <div class="flex text-white flex-col items-center justify-start h-full text-center">
+            <h2 class="text-4xl font-bold mt-8 mb-2 relative custom-after">Pourquoi Nous Rejoindre</h2>
+            <p class="text-2xl mt-4">Rejoignez une équipe dynamique qui valorise votre talent et vos ambitions. <br> 
+                Postulez dès maintenant et commencez votre voyage vers une carrière <br> enrichissante et épanouissante!</p>
+         
+          
     
-   
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-    
-            <nav>
-                <ul>
-                    <li><a  href="indes.html">Accueil</a></li>
-                    <li><a href="">Programme</a></li>
-                    <li><a class="active" href="recrutement.html">recrutement</a></li>
-                    <li><a href="">Destination</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-    
-            <div class="menu">
-            
-                <div class="language-dropdown">
-                    <button onclick="toggleLanguageDropdown()">Fr <i class="fa-solid fa-chevron-down"></i></button>
-                    <div id="language-dropdown-menu" class="dropdown-content">
-                        <a href="#" onclick="changeLanguage('ar')">Arabe</a>
-                        <a href="#" onclick="changeLanguage('fr')">Français</a>
-                        <a href="#" onclick="changeLanguage('es')">Español</a>
-                        <a href="#" onclick="changeLanguage('en')">English</a>
+      </div>
+
+      <section class="py-20">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- First Row -->
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-user-plus text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Rejoignez-Nous</h3>
                     </div>
+                    <p class="mt-2 text-white">Nous cherchons des talents! Envoyez-nous votre CV et devenez membre de notre équipe.</p>
                 </div>
-    
-                <div class="language-dropdown">
-                    <button onclick="toggleLoginDropdown()">Se connecter <i class="fa-solid fa-user"></i></button> 
-                    <div id="login-dropdown-menu" class="dropdown-content">
-                        <a href="#" onclick="handleLogin()">Se connecter</a>
-                        <a href="#" onclick="handleSignUp()">Créer un compte</a>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-users text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Travail d'Équipe</h3>
                     </div>
+                    <p class="mt-2 text-white">Collaborez avec des professionnels passionnés et dynamiques.</p>
+                </div>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-bullhorn text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Opportunités</h3>
+                    </div>
+                    <p class="mt-2 text-white">Nous offrons des opportunités de carrière enrichissantes. Postulez dès maintenant!</p>
+                </div>
+                <!-- Second Row -->
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-tools text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Formation</h3>
+                    </div>
+                    <p class="mt-2 text-white">Profitez de programmes de formation et de développement pour améliorer vos compétences.</p>
+                </div>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-shield-alt text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Engagement</h3>
+                    </div>
+                    <p class="mt-2 text-white">Nous nous engageons à créer un environnement de travail sécurisé et inclusif.</p>
+                </div>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-map-marked-alt text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Accessibilité</h3>
+                    </div>
+                    <p class="mt-2 text-white">Nos offres d'emploi sont accessibles à tous. Rejoignez-nous, peu importe où vous êtes!</p>
+                </div>
+                <!-- Third Row -->
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-lightbulb text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Innovation</h3>
+                    </div>
+                    <p class="mt-2 text-white">Nous recherchons des idées nouvelles et créatives pour transformer notre entreprise.</p>
+                </div>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-comments text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Support</h3>
+                    </div>
+                    <p class="mt-2 text-white">Notre équipe est là pour vous aider à chaque étape de votre parcours.</p>
+                </div>
+                <div class="card group bg-gradient-to-r from-gray-300 to-purple-900 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <div class="icon-wrapper transition duration-300">
+                            <i class="fas fa-trophy text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white ml-4">Réussite</h3>
+                    </div>
+                    <p class="mt-2 text-white">Ensemble, nous pouvons atteindre le succès. Postulez pour faire partie de notre histoire!</p>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+    
+      
+      
+      
+      
+    
+    </section>
+  
+    
+  </article>
+
+
+
+  <section class="min-h-screen bg-white ">
+    <div class="container mx-auto px-4 mb-5">
+        <h1 class="text-3xl font-bold text-center mb-8">Offres d'emploi</h1>
+
+        <!-- Filter Bar -->
+        <div class="flex justify-center mb-6">
+          <div class="flex justify-between w-full rounded-md space-x-4">
+              <button id="allJobs" class="filter-button w-full px-4 py-2 text-white bg-purple-950 rounded-md hover:bg-purple-800 focus:outline-none">Tout</button>
+              <button id="category1" class="filter-button w-full px-4 py-2 bg-white text-gray-800 rounded-md hover:bg-gray-100 focus:outline-none">Catégorie 1</button>
+              <button id="category2" class="filter-button w-full px-4 py-2 bg-white text-gray-800 rounded-md hover:bg-gray-100 focus:outline-none">Catégorie 2</button>
+              <button id="category3" class="filter-button w-full px-4 py-2 bg-white text-gray-800 rounded-md hover:bg-gray-100 focus:outline-none">Catégorie 3</button>
+          </div>
+      </div>
+      
+
+
+        <div id="job-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Job Card 1 -->
+          <div class="job-card category1 bg-white shadow-lg rounded-lg overflow-hidden">
+              <img src="/image/jobs/1.jpg" alt="Job Image" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h2 class="text-xl font-semibold">Directeur Général Adjoint</h2>
+                  <p class="text-gray-600 mt-2">Rejoignez notre compagnie aérienne en tant que Directeur Général Adjoint, contribuant à la stratégie opérationnelle et maintenant des normes élevées de sécurité et de service client.</p>
+                  <button class="mt-4 inline-block text-blue-500 hover:underline" onclick="showPopup('job1')">En savoir plus</button>
+              </div>
+          </div>
+
+
+            <!-- Job Card 2 -->
+            <div class="job-card category2 bg-white shadow-lg rounded-lg overflow-hidden">
+              <img src="/image/jobs/2.jpg" alt="Job Image" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h2 class="text-xl font-semibold">COO (Directeur des Opérations)</h2>
+                  <p class="text-gray-600 mt-2">Rejoignez notre compagnie aérienne en tant que COO, responsable de l’ensemble des opérations aériennes, garantissant efficacité, sécurité et qualité de service.</p>
+                  <button class="mt-4 inline-block text-blue-500 hover:underline" onclick="showPopup('job2')">En savoir plus</button>
+              </div>
+          </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card category2 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/3.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Responsable des Opérations de Vol</h2>
+                    <p class="text-gray-600 mt-2">Assurez l'efficacité et la sécurité des opérations de vol, supervisant toutes les opérations de vol et garantissant la conformité.</p>
+                    <button class="mt-4 inline-block text-blue-500 hover:underline" onclick="showPopup('job4')">En savoir plus</button>
+                </div>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card category2 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/4.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Hôtesses de l'Air et Stewards</h2>
+                    <p class="text-gray-600 mt-2">Rejoignez notre équipe pour offrir une expérience de voyage exceptionnelle à nos passagers tout en garantissant leur sécurité.</p>
+                    <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">En savoir plus</a>
+                </div>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card category3 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/5.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Pilote Capitaine de Bord</h2>
+                    <p class="text-gray-600 mt-2">Nous recherchons des pilotes expérimentés pour garantir la sécurité des vols et le confort des passagers.</p>
+                    <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">En savoir plus</a>
+                </div>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card category1 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/7.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Directeur Marketing</h2>
+                    <p class="text-gray-600 mt-2">Cherche un leader créatif pour diriger le marketing et les initiatives de croissance de l'entreprise.</p>
+                    <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">En savoir plus</a>
+                </div>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card category2 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/8.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Ingénieur de Maintenance Aéronautique</h2>
+                    <p class="text-gray-600 mt-2">Assurez la maintenance et la sécurité des avions en travaillant avec des technologies de pointe.</p>
+                    <button class="mt-4 inline-block text-blue-500 hover:underline" onclick="showPopup('job7')">En savoir plus</button>
+                </div>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card category3 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/9.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Contrôleur de Trafic Aérien</h2>
+                    <p class="text-gray-600 mt-2">Supervisez le trafic aérien pour garantir la sécurité et l'efficacité des vols.</p>
+                    <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">En savoir plus</a>
+                </div>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card category1 bg-white shadow-lg rounded-lg overflow-hidden hidden">
+                <img src="/image/jobs/10.jpg" alt="Job Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold">Analyste de Données</h2>
+                    <p class="text-gray-600 mt-2">Rejoignez notre équipe pour analyser les données de l'industrie aéronautique et aider à la prise de décision stratégique.</p>
+                    <a href="#" class="mt-4 inline-block text-blue-500 hover:underline">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="job-popup" class="fixed inset-0 z-50 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
+      <div class="bg-white rounded-lg max-w-lg mx-auto overflow-hidden shadow-lg">
+          <div class="bg-gray-200 p-4">
+              <h2 id="popup-title" class="text-xl font-semibold"></h2>
+          </div>
+          <div class="p-6 max-h-96 overflow-y-auto">
+              <p id="popup-description" class="text-gray-600 mt-2"></p>
+          </div>
+          <div class="bg-gray-200 p-4 flex justify-end">
+              <button onclick="closePopup()" class="text-red-500 hover:underline">Fermer</button>
+          </div>
+      </div>
+  </div>
+
+
+  <section class="min-h-screen bg-[#0E010C] py-10">
+
+
+    </section>
+  
+
+
+
+
+</body>
+
+<script>
+  fetch('hf/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+
+  const slides = document.querySelectorAll('.slide'); // Select all slides
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('activer'); // Hide all slides
+      slide.classList.add('inactive'); // Mark all as inactive
+      const textContainer = slide.querySelector('.text-container');
+      if (i === index) {
+        slide.classList.add('activer'); // Show the current slide
+        slide.classList.remove('inactive'); // Make it visible
+        textContainer.style.animationDelay = '0s'; // Start animation immediately
+        textContainer.style.opacity = '1'; // Ensure text is visible
+      } else {
+        textContainer.style.animationDelay = '0.5s'; // Delay for non-active text
+        textContainer.style.opacity = '0'; // Keep text hidden
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Loop back to first slide
+    showSlide(currentIndex);
+  }
+
+  setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+
+  const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        cards.forEach(c => {
+            if (c !== card) {
+                c.style.width = '30%'; // Keep other cards at original size
+            }
+        });
+        card.style.flexGrow = '1'; // Expand the hovered card
+        card.style.width = '35%'; // Slightly larger width for hovered card
+    });
+
+    card.addEventListener('mouseleave', () => {
+        cards.forEach(c => {
+            c.style.width = '30%'; // Reset all cards to original size
+            c.style.flexGrow = '0'; // Reset flex-grow
+        });
+    });
+});
+
+
+
+
+
+
+    // Function to filter job listings based on the selected category
+    function filterJobs(category) {
+        const jobCards = document.querySelectorAll('.job-card');
+        
+        jobCards.forEach(card => {
+            if (category === 'all' || card.classList.contains(category)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        document.querySelectorAll('.filter-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.id; // Get the ID of the clicked button
+
+        // Highlight the selected filter button
+        document.querySelectorAll('.filter-button').forEach(btn => {
+            // Reset styles for all buttons
+            btn.classList.remove('bg-purple-950', 'text-white');
+            btn.classList.add('bg-white', 'text-gray-800'); // Set default styles
+        });
+
+        // Set styles for the selected button
+        const selectedButton = category === 'allJobs' ? document.getElementById('allJobs') : document.getElementById(category);
+        selectedButton.classList.add('bg-purple-950', 'text-white'); // Highlight selected button
+    });
+});
+
+    }
+
+    // Event listeners for filter buttons
+    document.getElementById('allJobs').addEventListener('click', () => filterJobs('all'));
+    document.getElementById('category1').addEventListener('click', () => filterJobs('category1'));
+    document.getElementById('category2').addEventListener('click', () => filterJobs('category2'));
+    document.getElementById('category3').addEventListener('click', () => filterJobs('category3'));
+
+    // Initially show all jobs
+    filterJobs('all');
+
+    function showPopup(jobId) {
+            const jobDetails = {
+                job1: {
+                    title: "Directeur Général Adjoint",
+                    description: `
+                        <strong>Description du Poste :</strong> Nous recherchons un Directeur Général Adjoint passionné et expérimenté pour rejoindre notre compagnie aérienne en pleine croissance. Vous jouerez un rôle clé dans le développement et la mise en œuvre de notre stratégie opérationnelle, tout en veillant à ce que nous maintenions les normes les plus élevées en matière de sécurité et de service à la clientèle.<br><br>
+                        <strong>Missions :</strong><br>
+                        - Assister le Directeur Général dans la gestion quotidienne de l’entreprise.<br>
+                        - Contribuer à la définition et à la mise en œuvre de la stratégie de l'entreprise.<br>
+                        - Superviser les opérations aériennes, la maintenance, et les services au sol.<br>
+                        - Analyser les performances financières et opérationnelles et proposer des améliorations.<br>
+                        - Diriger et motiver les équipes pour atteindre les objectifs de l’entreprise.<br>
+                        - Représenter l'entreprise auprès des partenaires, des autorités de régulation et des clients.<br><br>
+                        <strong>Profil Recherché :</strong><br>
+                        - Diplôme supérieur en gestion, aviation, ou domaine connexe.<br>
+                        - Expérience significative (au moins 5 ans) dans un poste de direction au sein d’une compagnie aérienne ou d’un secteur connexe.<br>
+                        - Solides compétences en leadership et en gestion d’équipe.<br>
+                        - Excellente capacité d’analyse et de prise de décision.<br>
+                        - Maîtrise des réglementations aéronautiques et des enjeux de l'industrie.<br>
+                        - Excellentes compétences en communication, à l’oral comme à l’écrit.<br><br>
+                        <strong>Conditions :</strong><br>
+                        - Mobilité pour des déplacements fréquents.<br>
+                        - Langues : maîtrise de l’anglais, la connaissance d’autres langues est un plus.
+                    `
+                },
+                job2: {
+                    title: "COO (Directeur des Opérations)",
+                    description: `
+                        <strong>Description du Poste :</strong> Nous recherchons un COO (Directeur des Opérations) stratégique et dynamique pour rejoindre notre compagnie aérienne. Vous serez responsable de l’ensemble des opérations aériennes, garantissant efficacité, sécurité et qualité de service.<br><br>
+                        <strong>Missions :</strong><br>
+                        - Développer et mettre en œuvre la stratégie opérationnelle de l'entreprise.<br>
+                        - Superviser les opérations de vol, la maintenance, et les services au sol.<br>
+                        - Assurer le respect des normes de sécurité et de réglementation.<br>
+                        - Optimiser les processus pour améliorer l'efficacité opérationnelle et réduire les coûts.<br>
+                        - Collaborer avec les autres départements pour garantir une expérience client exceptionnelle.<br>
+                        - Analyser les performances opérationnelles et mettre en place des plans d'action pour atteindre les objectifs.<br><br>
+                        <strong>Profil Recherché :</strong><br>
+                        - Diplôme supérieur en gestion, aviation, ou domaine connexe.<br>
+                        - Expérience significative (au moins 7 ans) dans un poste de direction dans l'aviation ou un secteur connexe.<br>
+                        - Excellentes compétences en leadership et gestion d’équipe.<br>
+                        - Forte capacité analytique et sens de la résolution de problèmes.<br>
+                        - Maîtrise des réglementations aéronautiques et des normes de sécurité.<br>
+                        - Excellentes compétences en communication, à l’oral comme à l’écrit.<br><br>
+                        <strong>Conditions :</strong><br>
+                        - Mobilité pour des déplacements fréquents.<br>
+                        - Langues : maîtrise de l’anglais, la connaissance d'autres langues est un plus.
+                    `
+                },
+
+                job4: {
+                title: "Responsable des Opérations de Vol",
+                description: `
+                    <strong>Description du Poste :</strong> nbr airways, acteur majeur du secteur aérien, recherche un Responsable des Opérations de Vol pour garantir l’efficacité et la sécurité de nos opérations. Ce poste clé est crucial pour assurer une expérience client de qualité et le bon fonctionnement de nos vols.<br><br>
+                    <strong>Missions :</strong><br>
+                    - Superviser l’ensemble des opérations de vol, en veillant au respect des horaires et des procédures de sécurité.<br>
+                    - Coordonner les équipes au sol et en vol pour optimiser les performances.<br>
+                    - Gérer les situations d’urgence et résoudre les problèmes opérationnels de manière proactive.<br>
+                    - Collaborer avec les départements de maintenance, de sécurité et de service client.<br>
+                    - Analyser les performances opérationnelles et proposer des améliorations.<br><br>
+                    <strong>Profil recherché :</strong><br>
+                    - Diplôme en aviation, gestion des opérations ou domaine connexe.<br>
+                    - Expérience significative dans un poste similaire au sein d'une compagnie aérienne.<br>
+                    - Excellentes compétences en leadership et en communication.<br>
+                    - Maîtrise des réglementations aéronautiques et des normes de sécurité.<br>
+                    - Capacité à travailler sous pression et à prendre des décisions rapides.<br><br>
+                    <strong>Pourquoi nous rejoindre ?</strong><br>
+                    - Travailler dans un environnement dynamique et stimulant.<br>
+                    - Participer activement à l'amélioration des opérations aériennes.<br>
+                    - Opportunités de développement professionnel dans une entreprise en pleine expansion.
+                `
+            },
+     
+
+                job7: {
+                    title: "Directeur de Maintenance",
+                    description: `
+                        <strong>Description du Poste :</strong> Nous, nbr Airways, leader dans le secteur aérien, recherchons un Directeur de Maintenance passionné et expérimenté pour rejoindre notre équipe. Ce poste clé est essentiel pour garantir la sécurité et la fiabilité de notre flotte.<br><br>
+                        <strong>Missions :</strong><br>
+                        - Superviser l'ensemble des opérations de maintenance de la flotte.<br>
+                        - Assurer la conformité avec les réglementations de l'aviation civile.<br>
+                        - Élaborer et mettre en œuvre des programmes de maintenance préventive et corrective.<br>
+                        - Gérer une équipe de techniciens et d'ingénieurs, en favorisant leur développement professionnel.<br>
+                        - Collaborer avec d'autres départements pour optimiser les performances de la flotte.<br><br>
+                        <strong>Profil recherché :</strong><br>
+                        - Diplôme en ingénierie aéronautique ou domaine connexe.<br>
+                        - Expérience significative dans un rôle de gestion de maintenance au sein d'une compagnie aérienne.<br>
+                        - Excellentes compétences en leadership et en gestion d'équipe.<br>
+                        - Bonne connaissance des normes de sécurité et de maintenance aéronautique.<br>
+                        - Capacité à travailler sous pression et à prendre des décisions stratégiques.<br><br>
+                        <strong>Pourquoi nous rejoindre ?</strong><br>
+                        - Intégrer une équipe dynamique et innovante.<br>
+                        - Opportunités de développement professionnel dans un environnement en pleine croissance.<br>
+                        - Participer à la sécurité et à l'efficacité de l'aviation.
+                    `
+                }
+            };
+         
+
+            const job = jobDetails[jobId];
+            if (job) {
+                document.getElementById('popup-title').innerText = job.title;
+                document.getElementById('popup-description').innerHTML = job.description; // Use innerHTML for formatted content
+                document.getElementById('job-popup').classList.remove('hidden');
+                // Prevent body from scrolling when the popup is open
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('job-popup').classList.add('hidden');
+            // Allow body to scroll again when the popup is closed
+            document.body.style.overflow = 'auto';
+        }
+        // The existing filter function and event listeners remain the same.
+
+        // The existing filter function and event listeners remain the same.
+    </script>
+
+
+
+<style>
+  #job-popup {
+        transition: opacity 0.3s ease;
+    }
+
+    #job-popup.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #job-popup:not(.hidden) {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .max-h-96 {
+        max-height: 24rem; /* Adjust this value as needed */
+    }
+
+    /* Prevent body from scrolling when the popup is open */
+    body {
+        overflow: auto;
+    }
+</style>
+</html>

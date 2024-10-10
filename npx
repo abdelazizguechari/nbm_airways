@@ -1,0 +1,4 @@
+
+> airlin@1.0.0 build:css
+> npx tailwindcss -i ./airlin/assets/css/styler.css -o ./dist/styles.css --watch build:css tailwindcss ./styles.css ./dist/styles.css Specified input file ./styles.css does not exist.
+
