@@ -274,6 +274,17 @@
     <div class="container mx-auto px-4 mb-5">
         <h1 class="text-3xl font-bold text-center mb-8">Offres d'emploi</h1>
 
+            <!-- Additional Context Section -->
+    <div class="text-center mb-5">
+        <p class="text-gray-600 text-3xl mt-2">
+            Nous recherchons des passionnés prêts à relever de nouveaux défis. Découvrez nos offres ci-dessous et envoyez-nous votre candidature!
+        </p>
+    </div>
+
+
+
+    <div class="bg-[#0E010C] p-7  rounded  ">
+
         <!-- Filter Bar -->
         <div class="flex justify-center mb-6">
           <div class="flex justify-between w-full rounded-md space-x-4">
@@ -289,10 +300,10 @@
         <div id="job-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Job Card 1 -->
           <div class="job-card category1 bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src="/image/jobs/1.jpg" alt="Job Image" class="w-full h-48 object-cover">
+              <img class=" rounded " src="/image/jobs/1.jpg" alt="Job Image" class="w-full h-48 object-cover">
               <div class="p-6">
                   <h2 class="text-xl font-semibold">Directeur Général Adjoint</h2>
-                  <p class="text-gray-600 mt-2">Rejoignez notre compagnie aérienne en tant que Directeur Général Adjoint, contribuant à la stratégie opérationnelle et maintenant des normes élevées de sécurité et de service client.</p>
+                  <p class="text-gray-600 mt-2 text-center">Rejoignez notre compagnie aérienne en tant que Directeur Général Adjoint,</p>
                   <button class="mt-4 inline-block text-blue-500 hover:underline" onclick="showPopup('job1')">En savoir plus</button>
               </div>
           </div>
@@ -381,6 +392,8 @@
     </div>
 
 
+</div>
+
 
     <div id="job-popup" class="fixed inset-0 z-50 hidden bg-gray-800 bg-opacity-75 flex items-center justify-center">
       <div class="bg-white rounded-lg max-w-lg mx-auto overflow-hidden shadow-lg">
@@ -397,16 +410,31 @@
   </div>
 
 
-  <section class="min-h-screen bg-[#0E010C] py-10">
 
-
-    </section>
-  
+  <section class="min-h-screen bg-[#0E010C] bg-[url('/image/i5.png')] bg-cover bg-center py-10 flex justify-center items-center">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-red-50 text-3xl font-bold">
+                Soumettez vos documents à l'adresse e-mail suivante
+            </h1>
+            <p class="text-red-50 text-lg mt-2">
+                Veuillez inclure votre CV, vos diplômes et votre lettre de motivation.
+            </p>
+            <div class="mt-6 border border-white rounded-lg shadow-lg p-6">
+                <h2 class="text-red-50 text-xl font-semibold">
+                    contact@nbrairways.com
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
 
 </body>
+
+<script src="assets/js/main.js"></script>
 
 <script>
   fetch('hf/header.html')
